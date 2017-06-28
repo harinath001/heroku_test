@@ -14,7 +14,8 @@ def index(request):
     return HttpResponse('<pre>'+'hey world'+'</pre>')
 
 def hari(request):
-    return HttpResponse('This is harinath')
+    s = request.GET.get('key', '')
+    return HttpResponse(s)
 def db(request):
 
     greeting = Greeting()
